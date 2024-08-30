@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio do Restaurante Gourmet</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        /* Navegação */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        .navbar a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* Container principal */
+        .menu-container {
+            width: 80%;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Seções de menu */
+        .menu-section {
+            margin-bottom: 40px;
+        }
+
+        .menu-section h2 {
+            font-size: 2em;
+            border-bottom: 3px solid #ff6347;
+            color: #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Itens de menu */
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .menu-item-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .menu-item-description {
+            color: #666;
+            font-style: italic;
+        }
+
+        .menu-item-price {
+            color: #ff6347;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer a {
+            color: #ff6347;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <img src="https://www.petz.com.br/blog/wp-content/uploads/2015/09/Vincent02.jpg" alt="Logo do Restaurante" class="logo">
+        <h1>Restaurante Gourmet</h1>
+    </header>
+
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+        <a href="#entradas">Entradas</a>
+        <a href="#principais">Pratos Principais</a>
+        <a href="#sobremesas">Sobremesas</a>
+        <a href="#bebidas">Bebidas</a>
+    </nav>
+
+    <!-- Conteúdo do Menu -->
+    <div class="menu-container">
+        <!-- Seção de Entradas -->
+        <div id="entradas" class="menu-section">
+            <h2>Entradas</h2>
+            <div class="menu-item">
+                <div>
+                    <span class="menu-item-name">Salada Caesar</span><br>
+                    <span class="menu-item-description">Alface romana, croutons, parmesão e molho Caesar.</span>
+                </div>
+                <div class="menu-item-price">R$ 25,00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <span class="menu-item-name">Carpaccio de Carne</span><br>
+                    <span class="menu-item-description">Lâminas de carne, alcaparras, parmesão e rúcula.</span>
+                </div>
+                <div class="menu-item-price">R$ 32,00</div>
+            </div>
+        </div>
+
+        <!-- Seção de Pratos Principais -->
+        <div id="principais" class="menu-section">
+            <h2>Pratos Principais</h2>
+            <div class="menu-item">
+                <div>
+                    <span class="menu-item-name">Filé à Parmegiana</span><br>
+                    <span class="menu-item-description">Filé de carne bovina, queijo, molho de tomate e batatas.</span>
+                </div>
+                <div class="menu-item-price">R$ 50,00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <span class="menu-item-name">Salmão Grelhado</span><br>
+                    <span class="menu-item-description">Salmão ao molho de alcaparras com legumes salteados.</span>
+                </div>
+                <div class="menu-item-price">R$ 48,00</div>
+            </div>
+        </div>
+
+        <!-- Seção de Sobremesas -->
+        <div id="sobremesas" class="menu-section">
+            <h2>Sobremesas</h2>
+            <div class="menu-item">
+                <div>
+                    <span class="menu-item-name">Cheesecake de Morango</span><br>
+                    <span class="menu-item-description">Cheesecake com calda de morango e biscoito crocante.</span>
+                </div>
+                <div class="menu-item-price">R$ 22,00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <span class="menu-item-name">Brownie com Sorvete</span><br>
+                    <span class="menu-item-description">Brownie de chocolate com sorvete de baunilha.</span>
+                </div>
+                <div class="menu-item-price">R$ 18,00</div>
+            </div>
+        </div>
+
+        <!-- Seção de Bebidas -->
+        <div id="bebidas" class="menu-section">
+            <h2>Bebidas</h2>
+            <div class="menu-item">
+                <div>
+                    <span class="menu-item-name">Suco de Laranja</span><br>
+                    <span class="menu-item-description">Suco natural de laranja.</span>
+                </div>
+                <div class="menu-item-price">R$ 8,00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <span class="menu-item-name">Vinho Tinto</span><br>
+                    <span class="menu-item-description">Vinho tinto da casa, safra 2018.</span>
+                </div>
+                <div class="menu-item-price">R$ 25,00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2024 Restaurante Gourmet | <a href="https://www.youtube.com/results?search_query=rickroll">Contato</a> | <a href="https://www.youtube.com/results?search_query=rickroll">Instagram</a> | <a href="https://www.youtube.com/results?search_query=rickroll">Facebook</a></p>
+    </footer>
+
+</body>
+</html>
